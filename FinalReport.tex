@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+
+
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[section]{placeins}
+
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\graphicspath{ {images/} }
+
+\newcommand{\sinum}[1]{\num[scientific-notation=true]{#1}}
+
+\rhead[L]{FInal Report \thepage}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \title{LED Soundsystem: Quantifying the Effects of Music And Light on Human Listeners \\}
+\date{5-10-16}
+\author{Evan Nichols, Cole Jurden, Ian Nelson}
+\end{titlepage}
+
+\pagenumbering{gobble}
+\maketitle
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+\newpage
+
+%%%% INTRODUCTION %%%%%
+\section{Introduction}
+Americans spend an average of 4 hours and 5 minutes listening to music each day.\cite{earshare} Music can have both positive and negative effects on the human body and mind. Listening to classical and relaxing music after exposure to stressors can reduce anger and anxiety, and stimulate the sympathetic nervous system.\cite{musicstress} Similarly, light has distinct effects on mood and emotional response. Ambient brightness triggers the intensity of human's affective response, while reducing lights can reduce the emotionality of everyday decisions.\cite{light} 
+
+Our project, LED Soundsystem, will add new dimensions to the listening experience. We will use a heart rate monitor and Zigbee\textsuperscript{TM} Connected lights to create a listening environment reflective of the listener's current song selection. For example, a heavy metal song may trigger the lights to change strong orange and red, while a smooth jazz song would shift the lights to washed-out blues and greens. No commercial system exists today that creates song-influenced lighting while also measuring a listener's heart rate. The system as a whole provides a more enjoyable listening experience and provides insight into the physiological effects of music and lighting.
+
+ Athletes listen to pump-up music to prepare for games. Yoga instructors play Kirtan or Tibetan chants to enhance the focus of their participants. Music therapy programs seek to address physical, emotional, cognitive, and social needs of individuals. Different sounds provide different sensations to a human listener. 
+
+The same type of effects can be said for light: soft candle lighting sets an intimate, relaxing environment, while the harsh fluorescent lighting of a classroom at 8:00 a.m. can be a rude awakening for bleary-eyed students. Red lighting puts us in a heightened state of alertness or awareness, while blue tends to relax us. 
+
+We experience these two mediums so constantly that our physiological reactions to their stimulus are very much subconscious. But they don't have to be. With LED Soundsystem, we intend to analyze the physiological effects sounds and music have on human listeners by monitoring heartrate and temperature while experiencing different combinations of songs and light hues. Users will be able to choose a song from their Spotify account, and an accompanying light system will respond to match the tempo and genre. The application will display changes to user heartbeat and temperature. 
+
+%%%%% SYSTEM DESIGN %%%%%%
+\section{System Design}
+We'll describe the final system design here, how the iOS app works with the Apple Watch and sends data to a NodeJS/Express server for processing through Plotly's API.
+
+%%%% PROBLEM STATEMENT %%%%%
+\section{Problem Statement}
+
+Why is LED Soundsystem cool? What problem is it solving? Let's talk about the potential health benefits, and use in athletics and therapy.
+
+There are many potential benefits to LED Soundsystem. For one, it gives users a firsthand look into their physical responses to light and music. They will be able to identify which music and light combinations provide positive reactions, and which ones do not. This increased awareness could potentially improve the overall well-being of users. On a broader scale, aggregated data from this application could be incredibly valuable to Music Therapy researchers seeking to find the most therapeutic combinations of music and light.
+
+%%%% RELATED WORK %%%%%
+\section{Related Work}
+There are many studies regarding how music and light affect mood independently. In the case of music, studies directly linking certain genres to specific moods are abundant. Specifically, one paper analyzed the affect of four genres of music on mood. The four genres tested were grunge rock, classical, new age, and designer. The study tested different age groups by conducting a control survey featuring mood indicators and measured changes in results after exposure to different music. The study observed that every genre did affect mood in varying intensities \cite {mccraty}. Another article attempts to suggest music to a user based on mood, quantifying the music into four ?mood? tags using qualities such as tempo. Though the sample size was not large enough to be truly meaningful, the results of the experiment show that mood can be inferred from inherent qualities in music \cite {feng}. 
+
+Other research shows links between ambient brightness and humans' affective response. Bright sunny days have both positive and negative effects: they can fill the heart with joy, but they are also associated with heartbreak. \cite{kevan} Similarly, sunny days cause depression-prone people to become more depressed. Suicides peak in late spring and summer, and reach their lowest point during the winter months. Bright light tends to amplify a person's initial emotional response, whether that be positive or negative.\cite{xu} 
+
+NEED TO ADD THE STUFF I FOUND A FEW DAYS AGO, UPDATE BIB AND WRITE SUMMARY
+
+%%%% RESULTS AND ANALYSIS %%%%%%
+\section{Results and Analysis}
+We'll put some regression graphs here, along with our graphs of the Red, Blue and Control color sets and their associated heartrates.
+
+\newpage 
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{mybib}
+
+\end{document}
